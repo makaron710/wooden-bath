@@ -1,5 +1,6 @@
 header
   height: 100vh
+  box-shadow: -8px 8px 155px rgba(0, 0, 0, 0.29)
 
 .hero
   position: absolute
@@ -47,12 +48,13 @@ header
       letter-spacing: 0.9px
       padding-top: 20.5px
       padding-bottom: 20.5px
-      cursor: pointer
       transition: all 0.1s
       margin: auto
       &:active
         box-shadow: inset 0px 0px 3px 0px rgba(0,0,0,0.5)
         font-size: 0.84rem
+      &:hover
+        box-shadow: 0px 0px 5px 0px #ffba00
         
   .hero-swiper
     &__button
@@ -136,11 +138,14 @@ header
       letter-spacing: 2.48px
       text-decoration: none
       transition: all 0.3s
+      white-space: nowrap
       &:hover,
       &:active
         color: #ffba00
         font-weight: 700
         box-shadow: inset 0px -1px 0px 0px #ffba00
+    &__call
+      display: none
 
 .logo
   display: flex
@@ -170,3 +175,28 @@ header
     &__phone
       &__number
         font-size: 1.5rem
+
+@media screen and ( max-width: 767px )
+  .swiper__button
+    display: none
+  .menu
+    width: 100%
+    justify-content: space-between
+    &__navigation
+      display: none
+
+@media screen and ( max-width: 575px )
+  .menu
+    width: 95%
+    &__phone
+      &__number
+        display: none
+      &__call
+        display: block
+        width: 2.65rem
+        height: 2.65rem
+  .hero__content
+    &__title
+      font-size: 3.57rem
+    &__subtitle
+      font-size: 1.26rem

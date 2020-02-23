@@ -318,7 +318,8 @@ body {
   html {
     font-size: 12px; } }
 
-.section {
+.section,
+section {
   width: 100%;
   max-width: 1920px; }
 
@@ -328,7 +329,8 @@ body {
   margin: auto; }
 
 header {
-  height: 100vh; }
+  height: 100vh;
+  box-shadow: -8px 8px 155px rgba(0, 0, 0, 0.29); }
 
 .hero {
   position: absolute;
@@ -375,12 +377,13 @@ header {
       letter-spacing: 0.9px;
       padding-top: 20.5px;
       padding-bottom: 20.5px;
-      cursor: pointer;
       transition: all 0.1s;
       margin: auto; }
       .hero__content__button:active {
         box-shadow: inset 0px 0px 3px 0px rgba(0, 0, 0, 0.5);
         font-size: 0.84rem; }
+      .hero__content__button:hover {
+        box-shadow: 0px 0px 5px 0px #ffba00; }
   .hero .hero-swiper__button {
     position: absolute;
     bottom: 33px;
@@ -463,11 +466,14 @@ header {
     text-transform: uppercase;
     letter-spacing: 2.48px;
     text-decoration: none;
-    transition: all 0.3s; }
+    transition: all 0.3s;
+    white-space: nowrap; }
     .menu__phone__number:hover, .menu__phone__number:active {
       color: #ffba00;
       font-weight: 700;
       box-shadow: inset 0px -1px 0px 0px #ffba00; }
+  .menu__phone__call {
+    display: none; }
 
 .logo {
   display: flex;
@@ -495,6 +501,29 @@ header {
         margin-right: 30px; }
     .menu__phone__number {
       font-size: 1.5rem; } }
+
+@media screen and (max-width: 767px) {
+  .swiper__button {
+    display: none; }
+  .menu {
+    width: 100%;
+    justify-content: space-between; }
+    .menu__navigation {
+      display: none; } }
+
+@media screen and (max-width: 575px) {
+  .menu {
+    width: 95%; }
+    .menu__phone__number {
+      display: none; }
+    .menu__phone__call {
+      display: block;
+      width: 2.65rem;
+      height: 2.65rem; }
+  .hero__content__title {
+    font-size: 3.57rem; }
+  .hero__content__subtitle {
+    font-size: 1.26rem; } }
 
 .swiper__button {
   border: 2px solid black;
@@ -524,7 +553,8 @@ header {
 .primary-button {
   background-color: #ffba00;
   border: none;
-  color: #000; }
+  color: #000;
+  cursor: pointer; }
 
 @font-face {
   font-family: 'OpenSans';
@@ -550,3 +580,72 @@ header {
   font-family: 'OpenSans-Bold';
   src: url("fonts/OpenSans-Bold.woff") format("woff"), url("fonts/OpenSans-Bold.woff2") format("woff");
   font-display: swap; }
+
+.about {
+  padding-top: 6.5rem;
+  padding-bottom: 8.93rem; }
+  .about__title {
+    color: #000;
+    font-family: "OpenSans-Bold";
+    font-size: 2.14rem;
+    line-height: 2.79rem;
+    text-transform: uppercase;
+    letter-spacing: 3.6px;
+    margin: auto;
+    margin-bottom: 1.7rem;
+    text-align: center; }
+  .about__subtitle {
+    color: #000;
+    font-family: "OpenSans-Light";
+    font-size: 1.2rem;
+    line-height: 1.43rem;
+    text-transform: uppercase;
+    margin: auto;
+    margin-bottom: 4.2rem;
+    text-align: center; }
+  .about__content {
+    display: flex; }
+    .about__content__title {
+      color: #000000;
+      font-family: "OpenSans-Bold";
+      font-size: 1.2rem;
+      line-height: 1.3rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin: auto;
+      margin-bottom: -1.2rem; }
+    .about__content__description {
+      width: 50%;
+      padding-top: 3.6rem;
+      padding-right: 2.4rem; }
+      .about__content__description__text {
+        color: #000000;
+        font-family: "OpenSans-SemiBold";
+        font-size: 0.9rem;
+        line-height: 1.3rem;
+        letter-spacing: 0.9px;
+        margin: auto;
+        margin-bottom: 2.7rem; }
+        .about__content__description__text--long-text {
+          display: none; }
+      .about__content__description__button {
+        width: 166px;
+        height: 38px;
+        border-radius: 38px;
+        font-family: "OpenSans-Bold";
+        font-size: 0.86rem;
+        text-transform: uppercase;
+        letter-spacing: 0.84px;
+        transition: all 0.1s; }
+        .about__content__description__button:active {
+          box-shadow: inset 0px 0px 3px 0px rgba(0, 0, 0, 0.5);
+          font-size: 0.84rem; }
+        .about__content__description__button:hover {
+          box-shadow: 0px 0px 5px 0px #ffba00; }
+    .about__content__image {
+      width: 50%;
+      max-width: 501px;
+      max-height: 290px; }
+      .about__content__image img {
+        width: 501px;
+        max-width: 100%; }
