@@ -314,6 +314,30 @@ html {
 body {
   font-family: sans-serif; }
 
+.section-title {
+  color: #000;
+  font-family: "OpenSans-Bold";
+  font-size: 2.14rem;
+  line-height: 2.79rem;
+  text-transform: uppercase;
+  letter-spacing: 3.6px;
+  margin: auto;
+  margin-bottom: 1.7rem;
+  text-align: center; }
+
+.section-subtitle {
+  color: #000;
+  font-family: "OpenSans-Light";
+  font-size: 1.2rem;
+  line-height: 1.43rem;
+  text-transform: uppercase;
+  margin: auto;
+  margin-bottom: 4.2rem;
+  text-align: center; }
+
+.section-content {
+  display: flex; }
+
 @media screen and (max-width: 991px) {
   html {
     font-size: 12px; } }
@@ -379,11 +403,10 @@ header {
       padding-bottom: 20.5px;
       transition: all 0.1s;
       margin: auto; }
-      .hero__content__button:active {
-        box-shadow: inset 0px 0px 3px 0px rgba(0, 0, 0, 0.5);
-        font-size: 0.84rem; }
       .hero__content__button:hover {
         box-shadow: 0px 0px 5px 0px #ffba00; }
+      .hero__content__button:active {
+        font-size: 0.84rem; }
   .hero .hero-swiper__button {
     position: absolute;
     bottom: 33px;
@@ -584,68 +607,140 @@ header {
 .about {
   padding-top: 6.5rem;
   padding-bottom: 8.93rem; }
-  .about__title {
-    color: #000;
+  .about__content__title {
+    color: #000000;
     font-family: "OpenSans-Bold";
-    font-size: 2.14rem;
-    line-height: 2.79rem;
-    text-transform: uppercase;
-    letter-spacing: 3.6px;
-    margin: auto;
-    margin-bottom: 1.7rem;
-    text-align: center; }
-  .about__subtitle {
-    color: #000;
-    font-family: "OpenSans-Light";
     font-size: 1.2rem;
-    line-height: 1.43rem;
+    line-height: 1.3rem;
     text-transform: uppercase;
+    letter-spacing: 2px;
     margin: auto;
-    margin-bottom: 4.2rem;
-    text-align: center; }
-  .about__content {
-    display: flex; }
-    .about__content__title {
+    margin-bottom: -1.2rem; }
+  .about__content__description {
+    width: 50%;
+    padding-top: 3.6rem;
+    padding-right: 2.4rem; }
+    .about__content__description__text {
       color: #000000;
-      font-family: "OpenSans-Bold";
-      font-size: 1.2rem;
+      font-family: "OpenSans-SemiBold";
+      font-size: 0.9rem;
       line-height: 1.3rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
+      letter-spacing: 0.9px;
       margin: auto;
-      margin-bottom: -1.2rem; }
+      margin-bottom: 2.7rem; }
+      .about__content__description__text--long-text {
+        display: none; }
+    .about__content__description__button {
+      width: 166px;
+      height: 38px;
+      border-radius: 38px;
+      font-family: "OpenSans-Bold";
+      font-size: 0.86rem;
+      text-transform: uppercase;
+      letter-spacing: 0.84px;
+      transition: all 0.1s; }
+      .about__content__description__button:hover {
+        box-shadow: 0px 0px 5px 0px #ffba00; }
+      .about__content__description__button:active {
+        font-size: 0.84rem; }
+  .about__content__image {
+    width: 50%;
+    max-width: 501px;
+    max-height: 290px; }
+    .about__content__image img {
+      width: 501px;
+      max-width: 100%; }
+
+@media screen and (max-width: 767px) {
+  .about__subtitle {
+    margin-bottom: 3.4rem; }
+  .about__content {
+    flex-direction: column;
+    align-items: center; }
     .about__content__description {
-      width: 50%;
-      padding-top: 3.6rem;
-      padding-right: 2.4rem; }
+      min-width: 300px;
+      width: 60%;
+      max-width: 90%;
+      text-align: center;
+      padding-top: 1.7rem;
+      padding-right: 0; }
       .about__content__description__text {
-        color: #000000;
-        font-family: "OpenSans-SemiBold";
-        font-size: 0.9rem;
-        line-height: 1.3rem;
-        letter-spacing: 0.9px;
-        margin: auto;
-        margin-bottom: 2.7rem; }
-        .about__content__description__text--long-text {
-          display: none; }
-      .about__content__description__button {
-        width: 166px;
-        height: 38px;
-        border-radius: 38px;
-        font-family: "OpenSans-Bold";
-        font-size: 0.86rem;
-        text-transform: uppercase;
-        letter-spacing: 0.84px;
-        transition: all 0.1s; }
-        .about__content__description__button:active {
-          box-shadow: inset 0px 0px 3px 0px rgba(0, 0, 0, 0.5);
-          font-size: 0.84rem; }
-        .about__content__description__button:hover {
-          box-shadow: 0px 0px 5px 0px #ffba00; }
+        margin-bottom: 1.7rem; }
     .about__content__image {
-      width: 50%;
-      max-width: 501px;
-      max-height: 290px; }
-      .about__content__image img {
-        width: 501px;
-        max-width: 100%; }
+      min-width: 270px;
+      order: -1; }
+    .about__content__title {
+      text-align: center;
+      margin-bottom: 1.7rem; } }
+
+.projects {
+  box-shadow: 7px -8px 155px rgba(0, 0, 0, 0.29);
+  padding-top: 6.4rem;
+  padding-bottom: 9rem; }
+  .projects-container {
+    max-width: 976px; }
+  .projects__content {
+    width: 976px;
+    max-width: 100%;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between; }
+    .projects__content__card {
+      position: relative;
+      max-width: 309px;
+      max-height: 194px;
+      margin-bottom: 25px; }
+      .projects__content__card:hover .card--hover {
+        display: flex; }
+
+@media screen and (max-width: 991px) {
+  .projects__content {
+    height: auto;
+    max-width: 643px;
+    margin: auto; } }
+
+.card__title {
+  color: #b6d529;
+  font-family: "OpenSans";
+  font-size: 1.43rem;
+  text-transform: uppercase;
+  letter-spacing: 2.4px;
+  margin-top: 62px;
+  margin-bottom: 14px; }
+
+.card__description {
+  color: #ffffff;
+  font-family: "OpenSans";
+  font-size: 0.86rem;
+  letter-spacing: 1.5px;
+  margin-bottom: 14px; }
+
+.card__button {
+  width: 112px;
+  height: 29px;
+  padding: 10.5px;
+  border-radius: 29px;
+  font-family: "OpenSans-ExtraBold";
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  letter-spacing: 0.84px;
+  transition: all 0.1s; }
+  .card__button:hover {
+    box-shadow: 0px 0px 5px 0px #ffba00; }
+  .card__button:active {
+    font-size: 0.54rem; }
+
+.card--hover {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.56);
+  flex-direction: column;
+  align-items: center; }
+
+@media screen and (max-width: 991px) {
+  .card--hover {
+    display: flex; } }

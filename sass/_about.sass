@@ -1,28 +1,7 @@
 .about
   padding-top: 6.5rem
   padding-bottom: 8.93rem
-  &__title
-    color: #000
-    font-family: "OpenSans-Bold"
-    font-size: 2.14rem
-    line-height: 2.79rem
-    text-transform: uppercase
-    letter-spacing: 3.6px
-    margin: auto
-    margin-bottom: 1.7rem
-    text-align: center
-  &__subtitle
-    color: #000
-    font-family: "OpenSans-Light"
-    font-size: 1.2rem
-    line-height: 1.43rem
-    text-transform: uppercase
-    letter-spacing: 
-    margin: auto
-    margin-bottom: 4.2rem
-    text-align: center
   &__content
-    display: flex
     &__title
       color: #000000
       font-family: "OpenSans-Bold"
@@ -55,11 +34,10 @@
         text-transform: uppercase
         letter-spacing: 0.84px
         transition: all 0.1s
-        &:active
-          box-shadow: inset 0px 0px 3px 0px rgba(0,0,0,0.5)
-          font-size: 0.84rem
         &:hover
           box-shadow: 0px 0px 5px 0px #ffba00
+        &:active
+          font-size: 0.84rem
     &__image
       width: 50%
       max-width: 501px
@@ -67,5 +45,29 @@
       img
         width: 501px
         max-width: 100%
+
+@media screen and ( max-width: 767px )
+  .about
+    &__subtitle
+      margin-bottom: 3.4rem
+    &__content
+      flex-direction: column
+      align-items: center
+      &__description
+        min-width: 300px
+        width: 60%
+        max-width: 90%
+        text-align: center
+        padding-top: 1.7rem
+        padding-right: 0
+        &__text
+          margin-bottom: 1.7rem
+      &__image
+        min-width: 270px
+        order: -1
+      &__title
+        text-align: center
+        margin-bottom: 1.7rem
+  
 
 

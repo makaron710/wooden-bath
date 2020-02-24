@@ -1,0 +1,43 @@
+.card
+  &__title
+    color: #b6d529
+    font-family: "OpenSans"
+    font-size: 1.43rem
+    text-transform: uppercase
+    letter-spacing: 2.4px
+    margin-top: 62px
+    margin-bottom: 14px
+  &__description
+    color: #ffffff
+    font-family: "OpenSans"
+    font-size: 0.86rem
+    letter-spacing: 1.5px
+    margin-bottom: 14px
+  &__button
+    width: 112px
+    height: 29px
+    padding: 10.5px
+    border-radius: 29px
+    font-family: "OpenSans-ExtraBold"
+    font-size: 0.55rem
+    text-transform: uppercase
+    letter-spacing: 0.84px
+    transition: all 0.1s
+    &:hover
+      box-shadow: 0px 0px 5px 0px #ffba00
+    &:active 
+      font-size: 0.54rem
+  &--hover
+    display: none
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: rgba(0, 0, 0, 0.56)
+    flex-direction: column
+    align-items: center
+
+@media screen and ( max-width: 991px )
+  .card--hover
+    display: flex
