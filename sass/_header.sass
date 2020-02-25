@@ -67,37 +67,37 @@ header
       &-next
         left: 50%
         margin-left: 18.5px
-
-.swiper
-  &-container
-    position: relative
-    width: 100%
-    height: 100%
-    z-index: 0
-  &-wrapper
-    width: 100%
-    height: 100%
-  &-slide
-    width: 100%
-    height: 100%
-    &::before
-      content: ''
-      position: absolute
-      top: 0
-      left: 0
+header
+  .swiper
+    &-container
+      position: relative
       width: 100%
       height: 100%
-      background: rgba(0, 0, 0, 0.56)
-  &-slide-1
-    background: #6b6b6b url(../img/hero/hero-slide-bg-1.jpg) no-repeat center / cover
-  &-slide-2
-    background: #6b6b6b url(../img/hero/hero-slide-bg-2.jpg) no-repeat center / cover
-  &-slide-3
-    background: #6b6b6b url(../img/hero/hero-slide-bg-3.jpg) no-repeat center / cover
+      z-index: 0
+    &-wrapper
+      width: 100%
+      height: 100%
+    &-slide
+      width: 100%
+      height: 100%
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: rgba(0, 0, 0, 0.56)
+    &-slide-1
+      background: #6b6b6b url(../img/hero/hero-slide-bg-1.jpg) no-repeat center / cover
+    &-slide-2
+      background: #6b6b6b url(../img/hero/hero-slide-bg-2.jpg) no-repeat center / cover
+    &-slide-3
+      background: #6b6b6b url(../img/hero/hero-slide-bg-3.jpg) no-repeat center / cover
 
 .menu
   width: 970px
-  max-width: 970px
+  max-width: 100%
   margin: auto
   margin-top: 0
   margin-bottom: 0
@@ -174,6 +174,8 @@ header
     &__phone
       &__number
         font-size: 1.5rem
+  .logo
+    margin-right: 30px
 
 @media screen and ( max-width: 767px )
   .swiper__button
