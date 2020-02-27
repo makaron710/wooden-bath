@@ -178,13 +178,14 @@ header
     margin-right: 30px
 
 @media screen and ( max-width: 767px )
-  .swiper__button
-    display: none
-  .menu
-    width: 100%
-    justify-content: space-between
-    &__navigation
+  header
+    .swiper__button
       display: none
+    .menu
+      width: 100%
+      justify-content: space-between
+      &__navigation
+        display: none
 
 @media screen and ( max-width: 575px )
   .menu
@@ -201,3 +202,16 @@ header
       font-size: 3.57rem
     &__subtitle
       font-size: 1.26rem
+
+@media screen and ( max-height: 470px ) and ( max-width: 991px )
+  header
+    .swiper__button
+      display: none
+
+@media screen and ( max-height: 385px ) and ( max-width: 710px )
+  .hero__content
+    &__title
+      margin-bottom: 0
+    &__subtitle
+      margin-bottom: 5.2rem
+      margin-bottom: 0
