@@ -1,0 +1,73 @@
+.form-container
+  min-width: 307px
+  max-width: 307px
+  min-height: 332px
+  max-height: 332px
+  background: #fff
+  padding: 35px 33px 32px 33px
+  margin: auto
+  border-radius: 3px
+  &__title
+    max-width: 231px
+    margin: auto
+    margin-right: 6px
+    margin-bottom: 40px
+    text-align: center
+    color: #000000
+    font-family: "OpenSans-Bold"
+    font-size: 16px
+    font-weight: 400
+    line-height: 21.69px
+    text-transform: uppercase
+    letter-spacing: 1.42px
+    &--yellow
+      color: #ffba00
+      font-family: "OpenSans-ExtraBold"
+  &__safe-data
+    margin: auto
+    color: #000000
+    font-family: "OpenSans"
+    font-size: 10px
+    font-weight: 300
+    line-height: 21.69px
+    text-transform: uppercase
+    text-align: center
+    letter-spacing: 0.2px
+
+.form
+  display: flex
+  flex-direction: column
+  margin-bottom: 10px
+  &__input
+    width: 192px
+    height: 32px
+    margin: auto
+    border: none
+    border-bottom: 1px solid  #8e8e8e
+    padding: 10px
+    font-size: 13px
+    text-align: center
+    letter-spacing: 1px    
+    &::placeholder      
+      text-align: center
+    &-name
+      margin-bottom: 14px
+    &-phone
+      margin-bottom: 31px
+
+  &__button
+    width: 241px
+    height: 48px
+    border-radius: 48px
+    color: #000000
+    font-family: "OpenSans-ExtraBold"
+    font-size: 14px
+    text-transform: uppercase
+    letter-spacing: 0.6px
+    transition: all 0.1s
+    margin: auto
+    padding-right: 15px
+    &:hover
+      box-shadow: 0px 0px 5px 0px #ffba00
+    &:active
+      font-size: 0.84rem

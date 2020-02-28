@@ -1,0 +1,75 @@
+.footer
+  background: #323131
+  padding-top: 2rem
+  padding-bottom: 2rem
+  &__menu
+    padding: 0
+    display: flex    
+    &__logo
+      margin-right: 43px
+    &__rights-reserved
+      opacity: 0.52
+      color: #ffffff
+      font-family: "OpenSans"
+      font-size: 0.79rem
+      font-weight: 300
+      letter-spacing: 0.8px
+      margin-right: auto
+    &__phone
+      display: flex
+      &__call-button
+        text-transform: uppercase
+        color: #fff
+        text-decoration: none
+        font-size: 0.64rem
+        font-weight: 700
+        letter-spacing: 1.1px
+        border: 1px solid #fff
+        border-radius: 3px
+        padding: 10px 14px 8px 11px
+        margin-right: 4.31rem
+        transition: all 0.3s
+        &:hover
+          color: #ffba00
+          border-color: #ffba00
+      &__number
+        font-size: 1rem
+        display: flex
+        align-items: center
+
+@media screen and ( max-width: 767px )
+  .footer
+    &__menu
+      justify-content: space-between
+      &__logo
+        margin-right: 0
+      &__rights-reserved
+        margin-right: 0
+      &__phone
+        &__call-button
+          margin-right: 0
+        &__number
+          display: none
+
+@media screen and ( max-width: 575px )
+  .footer
+    &__menu
+      justify-content: space-around
+      flex-wrap: wrap
+      &__logo
+        margin-right: 5px
+      &__rights-reserved
+        order: 1
+        flex-basis: 100%
+        text-align: center
+        margin-top: 15px
+
+@media screen and ( max-width: 440px )
+  .footer
+    &__menu
+      &__phone
+        flex-basis: 100%
+        margin-top: 15px
+        display: flex
+        justify-content: center
+  
