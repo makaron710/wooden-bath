@@ -5,6 +5,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
 const minify = require('gulp-minify');
 const htmlmin = require('gulp-htmlmin');
+const imagemin = require('gulp-imagemin');
 
 // Compile sass into CSS & auto-inject into browsers | компилятор sass в css
 function serveSass() {
@@ -72,6 +73,13 @@ function fonts(done) {
     done();
 };
 
+function imageMin(done) {
+    src('img/**/**')
+        .pipe(imagemin())
+        .pipe(dest('dist/img'));
+    done();
+};
+
 exports.bs = bs;
-exports.build = series(buildCSS, buildJS, buildHTML, php, fonts);
+exports.build = series(buildCSS, buildJS, buildHTML, php, fonts, imageMin);
 

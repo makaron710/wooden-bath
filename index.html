@@ -13,22 +13,24 @@
 
   <!-- Yandex.Metrika counter -->
   <script type="text/javascript" >
-    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    setTimeout(() => {
+      (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+      (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-    ym(57879148, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:true
-    });
+      ym(57879148, "init", {
+          clickmap:true,
+          trackLinks:true,
+          accurateTrackBounce:true,
+          webvisor:true
+      });
+    }, 2000)
   </script>
   <noscript><div><img src="https://mc.yandex.ru/watch/57879148" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
   <!-- /Yandex.Metrika counter -->
 
     <!-- HEADER -->
-    <header class="section">
+    <header class="section header">
       <div class="swiper-container">
         <div class="swiper-wrapper swiper-no-swiping">
           <div class="swiper-slide swiper-slide-1"></div>
@@ -47,10 +49,10 @@
             </a>
             <!-- /.logo -->
             <nav class="menu__navigation">
-              <a href="#" class="menu__navigation__item">О нас</a>
-              <a href="#" class="menu__navigation__item">Наши работы</a>
-              <a href="#" class="menu__navigation__item">Отзывы</a>
-              <a href="#" class="menu__navigation__item">Оставить заявку</a>
+              <a href="#about" class="menu__navigation__item">О нас</a>
+              <a href="#projects" class="menu__navigation__item">Наши работы</a>
+              <a href="#customers" class="menu__navigation__item">Отзывы</a>
+              <a href="#contacts" class="menu__navigation__item">Оставить заявку</a>
             </nav>
             <!-- /.navigation -->
             <div class="phone menu__phone">
@@ -82,7 +84,7 @@
     <main>
 
       <!-- ABOUT -->
-      <section class="about">
+      <section class="about" id="about">
         <div class="container about-container">
           <h2 class="section-title about__title">о нашей компании</h2>
           <h3 class="section-subtitle about__subtitle">и немного истории</h3>
@@ -218,7 +220,7 @@
       <!-- /.PROJECTS -->
 
       <!-- CUSTOMERS -->
-      <section class="customers">
+      <section class="customers" id="customers">
         <div class="container customers-container">
           <h2 class="section-title customers__title">что говорят наши клиенты</h2>
           <h3 class="section-subtitle customers__subtitle">слова людей доверяющих нам</h3>
@@ -266,7 +268,7 @@
       <!-- /.CUSTOMERS -->
 
       <!-- CONTACTS -->
-      <section class="contacts">
+      <section class="contacts" id="contacts">
         <div class="container contacts-container">
           <h2 class="section-title contacts__title">форма заявки</h2>
           <h3 class="section-subtitle contacts__subtitle">для дальнейшей консультации оставьте заявку </h3>
@@ -320,6 +322,10 @@
       </div>
     </footer>
     <!-- /.FOOTER -->
+
+    <!-- SCROLL-UP-BUTTON -->
+    <button class="scroll-up-button"></button>
+    <!-- /.SCROLL-UP-BUTTON -->
 
     <script src="js/jquery-3.4.1.min.js"></script>  
     <script src="js/swiper.min.js"></script>
