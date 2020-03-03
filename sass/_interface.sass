@@ -63,6 +63,27 @@ button
   &:hover
     opacity: 1
 
+.close-btn
+  padding: 0
+  width: 30px
+  height: 30px
+  background: white url('../img/interface/close-btn.svg') no-repeat center / cover
+  border: none
+  border-radius: 50%
+  cursor: pointer
+  transition: all 0.3s
+  &:focus,
+  &:hover
+    background-color: #cfcfcf    
+
 @media screen and ( max-width: 991px )
   .scroll-up-button
     opacity: 1
+  
+  .close-btn
+    &:focus,
+    &:hover
+      background-color: white  
+
+
+  

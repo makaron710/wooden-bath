@@ -1,18 +1,20 @@
 <!doctype html>
 <html lang="ru">
   <head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="sharov maxim">
     <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/swiper.min.css">
-    <title>Заголовок</title>
+    <title>Деревянные бани</title>
   </head>
   <body>
 
   <!-- Yandex.Metrika counter -->
-  <script type="text/javascript" >
+  <script type="text/javascript">
     setTimeout(() => {
       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
       m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
@@ -66,7 +68,7 @@
           <div class="hero__content">
             <h1 class="hero__content__title">деревянные бани</h1>
             <h2 class="hero__content__subtitle">из редких и качественных пород дерева</h2>
-            <button class="primary-button hero__content__button">Получить консультацию</button>            
+            <button id="receiveConsultation" class="primary-button hero__content__button">Получить консультацию</button>            
           </div>
           <!-- /.hero-content -->
         </div>
@@ -278,12 +280,16 @@
             <div class="form-container">
               <h2 class="form-container__title">мы свяжемся с вами в течении <span class="form-container__title--yellow">10 мин.</span></h2>
 
-              <form action="" class="form contacts__form">
-                <label for=""></label>
-                <input type="text" class="form__input form__input-name" placeholder="Имя">
+              <form action="#" id="contacts-form" class="form contacts__form">
+                <div class="form__input-wrap">
+                  <label for="contacts__user-name"></label>
+                  <input type="text" id="contacts__user-name" class="form__input form__input-name" name="userName" placeholder="Имя">
+                </div>
 
-                <label for=""></label>
-                <input type="text" class="form__input form__input-phone" placeholder="Телефон">
+                <div class="form__input-wrap">
+                  <label for="contacts__user-phone"></label>
+                  <input type="tel" id="contacts__user-phone" class="form__input form__input-phone" name="userPhone" placeholder="Телефон">
+                </div>
 
                 <button class="form__button primary-button">отправить</button>
               </form>
@@ -326,6 +332,35 @@
     <!-- SCROLL-UP-BUTTON -->
     <button class="scroll-up-button"></button>
     <!-- /.SCROLL-UP-BUTTON -->
+
+    <!-- MODAL-FORM -->
+    <div id="modalForm" class="modal-form modal">
+      <div class="form-container modal__form-container">
+
+        <button class="close-btn modal__form-container__close-btn"></button>
+        <!-- /.close-btn modal__close-btn -->
+
+        <h2 class="form-container__title">мы свяжемся с вами в течении <span class="form-container__title--yellow">10 мин.</span></h2>
+
+        <form action="#" id="modal-form" class="form modal__form">
+          <div class="form__input-wrap">
+            <label for="modal__user-name"></label>
+            <input type="text" id="modal__user-name" class="form__input form__input-name" name="userName" placeholder="Имя">
+          </div>
+
+          <div class="form__input-wrap">
+            <label for="modal__user-phone"></label>
+            <input type="tel" id="modal__user-phone" class="form__input form__input-phone" name="userPhone" placeholder="Телефон">
+          </div>
+
+          <button class="form__button primary-button">отправить</button>
+        </form>
+
+        <p class="form-container__safe-data"><i class="fa fa-lock" aria-hidden="true"></i>&nbsp&nbspВаши данные под защитой</p>
+      </div>
+      <!-- /.form-container -->
+    </div>
+    <!-- /.MODAL-FORM -->
 
     <script src="js/jquery-3.4.1.min.js"></script>  
     <script src="js/swiper.min.js"></script>

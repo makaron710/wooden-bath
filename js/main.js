@@ -108,9 +108,16 @@ $(document).ready(function () {
     /* effect: 'fade' */
   });
 
-  // кнопка прокрутки вверх
+  // Кнопка прокрутки вверх
   $(function () {
     $('.scroll-up-button').hide();
+
+    if ($(window).scrollTop() > 600) {
+      $('.scroll-up-button').fadeIn();
+    } else {
+      $('.scroll-up-button').fadeOut();
+    }
+
 
     $(window).scroll(function () {
       if ($(this).scrollTop() > 600) {
@@ -120,6 +127,20 @@ $(document).ready(function () {
       }
     });
 
+    // Если доскролили нижней секции, кнопка отодвигается на 15px + торчащий кусок этой секции
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > ($(document).height() - $('.footer').outerHeight() - $(window).outerHeight())) {
+        $('.scroll-up-button').css("bottom", - $(document).height() + $(this).scrollTop() + $(window).outerHeight() + $('.footer').outerHeight() + 15);
+      } else {
+        $('.scroll-up-button').css("bottom", 15);
+      }
+    });
+
+/*     $(window).scroll(function () {
+      console.log(- $(document).height() + $(this).scrollTop() + $(window).outerHeight() + $('.footer').outerHeight()
+      );
+    }); */
+
     $('.scroll-up-button').click(function () {
       $('html').animate({
         scrollTop: 0
@@ -127,6 +148,7 @@ $(document).ready(function () {
     });
   });
 
+  // Плавный переход по якорям
   const anchors = document.querySelectorAll('a[href*="#"]')
 
   for (let anchor of anchors) {
@@ -142,5 +164,72 @@ $(document).ready(function () {
     })
   }
 
+  // СОБЫТИЯ МОДАЛЬНОГО ОКНА
+  const modalCloseBtn = document.querySelector('.close-btn');
+  const modal = document.querySelector('.modal');
+  const recCons = document.getElementById('receiveConsultation');
+  const modalForm = document.getElementById('modalForm');
+
+  // Закрытие модального окна по кнопке .close-btn
+  modalCloseBtn.addEventListener('click', function() {
+    modal.classList.remove('modal--visible');
+    document.body.style.overflow = 'auto';
+  });
+
+  // Закрытие модального окна по кнопке ESC
+  document.addEventListener('keyup', function (e) {
+    if (e.key === "Escape" || e.keyCode === 27) {
+      modal.classList.remove('modal--visible');
+      document.body.style.overflow = 'auto';
+    }
+  });
+
+  // Закрытие модального окна по клику по темной области
+  document.addEventListener('click', function() {
+    if ((event.target.classList.contains('modal--visible')) && !event.target.classList.contains('form-container')) {
+      modal.classList.remove('modal--visible');
+      document.body.style.overflow = 'auto';
+    }
+  });
+
+  // Открытие modal-form
+  recCons.addEventListener('click', function() {
+    modalForm.classList.add('modal--visible');
+    document.body.style.overflow = 'hidden';
+  });
+
+  // ФОРМА
+  // Маска для номера телефона
+  $('[type=tel]').mask('+7(000) 000-00-00');
+
+  // Валидация формы
+  $('.form').each(function validateForm() {
+    $(this).validate({
+      // Класс, который будет присваиваться для элементов (полей) с ошибкой
+      errorClass: "invalid",
+
+      // Правила
+      rules: {
+        userName: {
+          required: true,
+          minlength: 2,
+          maxlength: 15
+        },
+        userPhone: {
+          required: true,
+          minlength: 17
+        }
+      },
+      // сообщения
+      messages: {
+        userName: {
+          required: "Введите свое имя",
+          minlength: "Должно быть не менее 2 символов",
+          maxlength: "Должно быть не более 15 символов"
+        },
+        userPhone: "Введите 10-значный номер телефона"
+      }
+    });
+  });
 
 }); 

@@ -1,0 +1,33 @@
+.modal
+  display: flex
+  justify-content: center
+  align-items: center
+  position: fixed
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  z-index: 900
+  background: rgba(0, 0, 0, 0.5)
+  opacity: 0  
+  transition: opacity 0.1s ease-in
+  pointer-events: none
+  &--visible
+    opacity: 1
+    overflow-y: auto
+    pointer-events: auto
+
+.modal
+  &__form-container
+    position: relative
+    &__close-btn
+      position: absolute
+      right: -15px
+      top: -15px
+
+@media screen and ( max-width: 991px )
+  .modal
+    &__form-container
+      &__close-btn
+        right: 0
+        top: 0    
